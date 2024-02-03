@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>JavaScript form validation - checking non-empty</title>
+
+
+<link rel='stylesheet' href='' type='text/css' />      
+</head><body onload='document.form1.text1.focus()' style="font-size: x-large;border: 6px double;background-image: url('p2.png'); text-decoration-thickness:2px ;margin-left : 30%;margin-right : 30%;background-size: cover;">
+    <center><h1 style="font-family: Chiller;font-size: 63px;">Register Here</h1>
+    <div class="mail">
+      
+        <form name="form1" action="#">
+
+            <div class="row ">
+                <div class="col">
+                    <label for="First name">First name:</label>
+                  <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                </div><br>
+                <div class="col">
+                    <label for="Last name">Last name:</label>
+                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                </div><br>
+            </div>
+            <label for="phonenumber">Contact:</label>
+        <input type='text' name='text1'/>
+&nbsp;<br><br>
+ <div>
+
+ Gender: <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="fmale">Female
+</div>
+
+
+<br>
+<div class="col-12">
+    <label for="inputAddress" class="form-label">Address:</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div><br>
+  
+ 
+  
+  </div><br>
+
+  <li class="submit"><input type="submit" name="submit" value="Submit" onclick="phonenumber(document.form1.text1)" style="font-size: x-large;"/></li>
+</form>
+</div></center>
+
+<script>
+   
+   function phonenumber(inputtxt)
+{
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if(inputtxt.value.match(phoneno))
+        {
+      return true;
+        }
+      else
+        {
+        alert("Invalid phone number");
+        return false;
+        }
+}
+
+</script>
+<br><br><br>
+
+<a href="index.html" style="float: right;">Go to home page</a>
+</body>
+</html>
